@@ -36,7 +36,7 @@ class Test(unittest.TestCase):
     def test_a():
         browser.open_url("https://the-internet.herokuapp.com/forgot_password")
         forgot_page = ForgotPassword()
-        forgot_page.input_email("vicetone.api@gmail.com")
+        forgot_page.input_email("your.email@here.com")
         forgot_page.click_button()
 
     @staticmethod
