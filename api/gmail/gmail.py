@@ -1,6 +1,7 @@
 import time
 import base64
 import colorama
+import os
 from googleapiclient.discovery import build
 from httplib2 import Http
 from oauth2client import file, client, tools
@@ -10,6 +11,7 @@ colorama.init()
 
 
 class MailListener:
+    os.chdir(r"../api/gmail")
 
     def __init__(self):
         pass

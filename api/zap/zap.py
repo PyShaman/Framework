@@ -1,5 +1,6 @@
 import time
 import requests
+import os
 from retrying import retry
 from subprocess import Popen, DEVNULL
 import zapv2
@@ -8,10 +9,10 @@ from datetime import datetime
 
 class Zap:
     def __init__(self):
-        self.localProxy = {"http": "http://127.0.0.1:8095", "https": "http://127.0.0.1:8095"}
+        self.localProxy = {"http": "http://127.0.0.1:8096", "https": "http://127.0.0.1:8096"}
         self.host = "http://127.0.0.1"
-        self.port = "8095"
-        self.apikey = "et06b0sqq3fd4ltr5qe1a8qhts"
+        self.port = "8096"
+        self.apikey = "al75sdd15vubce6vtahhkcscjn"
         self.zap = zapv2.ZAPv2(proxies=self.localProxy, apikey=self.apikey)
         self.core = self.zap.core
         self.spider = self.zap.spider
@@ -51,6 +52,7 @@ class Zap:
         time.sleep(5)
         print("Saving HTML report to file")
         timestamp = str(datetime.now().isoformat()).replace(":", "-")[:-7]
+        os.chdir(r"../../reports")
         my_file = open(f"ZAP_scan_{timestamp}.html", "w")
         my_file.write(self.core.htmlreport(self.apikey))
         my_file.close()
