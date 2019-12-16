@@ -3,7 +3,7 @@
 Things to remember before running this framework:
 
 1) You need to have installed one version of Python (3.6+). If you are
- using linux, remember to use pip3 when installing requirements.
+ using linux, remember to use pip3 when installing requirements (pip install -r requirements.txt).
  
 2) You need to have Python added to your system path.
 
