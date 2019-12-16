@@ -22,7 +22,9 @@ in "test_01.py" file.
 
 8) Remember to set proper interpreter to your PyCharm (it should be
 the path to Python 3.6+ executable file and it should looks similar to
-C:\Users\xxx\AppData\Local\Programs\Python\Python3X-YY\python.exe).
+C:\Users\xxx\AppData\Local\Programs\Python\Python3X-YY\python.exe). If you see
+few options to choose, you did something weird before, so to not waste
+your time, reinstall PyCharm ;)
 
 9) Remember to change proper port in zap.py (lines 12 and 14), 
 test_01.py (line 23) files.
