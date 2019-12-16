@@ -8,6 +8,7 @@ from selenium import webdriver
 from selene.api import *
 from webdriver_manager.chrome import ChromeDriverManager
 from elements.pages.forgot_password import ForgotPassword
+from elements.pages.email_sent import EmailSent
 from api.zap.zap import Zap
 
 
@@ -20,7 +21,7 @@ class Test(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         proxy_host = "127.0.0.1"
-        proxy_port = "8096"
+        proxy_port = "8095"
         options = webdriver.ChromeOptions()
         options.add_argument("--start-maximized")
         options.add_argument("--allow-running-insecure-content")
@@ -37,8 +38,10 @@ class Test(unittest.TestCase):
     def test_a():
         browser.open_url("https://the-internet.herokuapp.com/forgot_password")
         forgot_page = ForgotPassword()
-        forgot_page.input_email("your@email.com")
+        email_sent_page = EmailSent()
+        forgot_page.input_email("your@email_here.com")
         forgot_page.click_button()
+        email_sent_page.email_confirmation.should(have.text("Your e-mail's been sent!"))
 
     @staticmethod
     def test_b():

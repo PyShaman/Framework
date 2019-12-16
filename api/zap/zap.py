@@ -9,10 +9,10 @@ from datetime import datetime
 
 class Zap:
     def __init__(self):
-        self.localProxy = {"http": "http://127.0.0.1:8096", "https": "http://127.0.0.1:8096"}
+        self.localProxy = {"http": "http://127.0.0.1:8095", "https": "http://127.0.0.1:8095"}
         self.host = "http://127.0.0.1"
-        self.port = "8096"
-        self.apikey = "al75sdd15vubce6vtahhkcscjn"
+        self.port = "8095"
+        self.apikey = "your_api_key_here"
         self.zap = zapv2.ZAPv2(proxies=self.localProxy, apikey=self.apikey)
         self.core = self.zap.core
         self.spider = self.zap.spider
