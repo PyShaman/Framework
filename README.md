@@ -17,7 +17,7 @@ You need to have Java added to your system path.
 6) After you clone this repository to your disc, then copy your own
 "credentials.json" and "token.json" to Framework/api/gmail directory.
 
-7) Remember to change the email address to yours on the test_a (line 40)
+7) Remember to change the email address to yours on the test_a (line 42)
 in "test_01.py" file.
 
 8) Remember to set proper interpreter to your PyCharm (it should be
@@ -27,7 +27,7 @@ few options to choose, you did something weird before, so to not waste
 your time, reinstall PyCharm ;)
 
 9) Remember to change proper port in zap.py (lines 12 and 14), 
-test_01.py (line 23) files.
+test_01.py (line 24) files.
 
 10) Remember to change proper path to OWASP ZAP Proxy executable in 
 Framework/api/zap/zap.py file (line 23 and 24).
