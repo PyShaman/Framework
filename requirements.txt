@@ -16,7 +16,7 @@ pyasn1-modules==0.2.7
 python-owasp-zap-v2.4==0.0.15
 requests==2.22.0
 retrying==1.3.3
-rsa==4.0
+rsa==4.7
 selene==0.0.8
 selenium==2.53.1
 six==1.13.0
